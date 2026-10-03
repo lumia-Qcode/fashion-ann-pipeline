@@ -20,7 +20,6 @@ def main():
     x_tr, x_val, y_tr, y_val = train_test_split(
         x_train, y_train,
         test_size=params["test_size"], random_state=params["seed"], stratify=y_train,
-        print("Class counts in train:", np.bincount(y_tr))
     )
     print("Class counts in train:", np.bincount(y_tr))
 
