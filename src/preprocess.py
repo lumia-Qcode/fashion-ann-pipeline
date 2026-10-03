@@ -14,8 +14,11 @@ def main():
     x_train, y_train = raw["x_train"], raw["y_train"]
     x_test, y_test = raw["x_test"], raw["y_test"]
 
-    x_train = x_train.astype("float32") / 255.0
-    x_test = x_test.astype("float32") / 255.0
+    x_train = x_train.astype("float32")
+    x_test = x_test.astype("float32")
+    mean, std = x_train.mean(), x_train.std()
+    x_train = (x_train - mean) / std
+    x_test = (x_test - mean) / std
 
     x_tr, x_val, y_tr, y_val = train_test_split(
         x_train, y_train,
