@@ -1,6 +1,6 @@
-tensorflow 
+tensorflow
 dvc
 dvc[gdrive]
-pyyaml 
-scikit-learn 
+pyyaml
+scikit-learn
 matplotlib
